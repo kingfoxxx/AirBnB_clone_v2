@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i#!/usr/bin/python3
 """
 Fabric script that distributes an archive to your web servers
 """
@@ -7,7 +7,7 @@ from datetime import datetime
 from fabric.api import *
 import os
 
-env.hosts = ["100.25.159.136", "52.87.232.38"]
+env.hosts = ["54.146.81.22", "52.87.232.38"]
 env.user = "ubuntu"
 
 
