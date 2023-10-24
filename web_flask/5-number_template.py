@@ -22,7 +22,7 @@ def hbnb():
 
 @app.route("/c/<text>", strict_slashes=False)
 def c_text(text):
-    """ Display C follow by the value of texts"""
+    """ Display C follow by the value of text"""
     text = text.replace("_", " ")
     return "C {}".format(text)
 
@@ -40,3 +40,13 @@ def integ(n):
     """Display "<n> is a number" only if <n> is a integer"""
     if type(n) == int:
         return "{} is a number".format(n)
+
+
+@app.route("/number_template/<int:n>", strict_slashes=False)
+def number_html(n):
+    """Display HTML and change h1 page only if n is an integer"""
+    return render_template("5-number.html", num=n)
+
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
